@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Game</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <!-- Inline SVG Logo -->
+            <svg class="logo" viewBox="0 0 176 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                <path d="M112.413,7.695C110.408,7.695 109.878,8.926 109.9,10.399L109.9,11.854L112.532,11.854L112.532,13.666L109.9,13.666L109.9,23.131L107.8,23.131L107.8,13.659L105.627,13.659L105.627,11.848L107.8,11.848L107.8,10.689C107.8,7.742 109.033,5.715 112.051,5.715L113.258,5.715L113.258,7.699L112.413,7.695Z" style="fill:white;fill-rule:nonzero;"/>
+    <g transform="matrix(1,0,0,1,-9.625,0)">
+        <path d="M133.625,11.993L133.288,13.977C132.775,13.73 132.215,13.598 131.645,13.59C129.397,13.59 128.506,16.029 128.506,19L128.506,23.129L126.382,23.129L126.382,11.847L128.506,11.847L128.506,14.408C129.085,12.424 130.172,11.558 131.669,11.558C132.467,11.558 133.288,11.771 133.625,11.993Z" style="fill:white;fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-41.9693,0)">
+        <path d="M191.969,16.604L191.969,23.125L189.868,23.125L189.868,16.726C189.868,14.841 188.709,13.635 187.139,13.635C185.57,13.635 183.686,14.577 183.686,17.016L183.686,23.125L181.585,23.125L181.585,11.847L183.686,11.847L183.686,13.567C184.362,12.19 186.199,11.562 187.429,11.562C190.23,11.558 191.997,13.442 191.969,16.604Z" style="fill:white;fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-68.575,0)">
+        <path d="M204.924,18.392L195.748,18.392C196.061,20.396 197.511,21.434 199.442,21.434C200.819,21.434 202.075,20.806 202.727,19.671L204.537,20.396C203.572,22.352 201.543,23.414 199.37,23.414C196.158,23.414 193.575,21.024 193.575,17.45C193.575,13.875 196.158,11.558 199.37,11.558C202.583,11.558 204.973,13.876 204.973,17.45C204.973,17.764 204.947,18.078 204.924,18.392ZM202.871,16.581C202.607,14.648 201.23,13.539 199.37,13.539C197.462,13.539 196.11,14.552 195.772,16.581L202.871,16.581Z" style="fill:white;fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,34.5,3.5)">
+        <path d="M118.391,16.675L125.452,10.097L118.767,10.097L118.767,8.065L127.46,8.065L127.46,11.101L120.44,17.679L128.008,17.679L128.008,19.712L118.391,19.712L118.391,16.675Z" style="fill:white;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,34.5,3.5)">
+        <path d="M134.652,19.669L133.868,19.669L129.74,8.065L132.11,8.065L135.391,17.488L138.57,8.065L140.938,8.065L135.43,24.116L133.116,24.116L134.652,19.669Z" style="fill:white;"/>
+    </g>
+    <path d="M8.305,9.541L8.305,8.558C6.679,8.336 5.026,8.667 3.611,9.498C2.195,10.329 1.101,11.612 0.503,13.14C-0.095,14.669 -0.162,16.353 0.313,17.924C0.789,19.495 1.778,20.86 3.123,21.801L3.022,21.69C2.105,20.646 1.504,19.363 1.29,17.99C1.075,16.618 1.255,15.213 1.809,13.939C2.363,12.665 3.268,11.575 4.418,10.797C5.569,10.018 6.917,9.582 8.305,9.541Z" style="fill:rgb(37,244,238);fill-rule:nonzero;"/>
+    <path d="M8.478,20.187C9.348,20.181 10.183,19.841 10.809,19.237C11.436,18.633 11.806,17.811 11.844,16.942L11.852,1.033L14.741,1.033L14.734,0.997C14.674,0.668 14.644,0.334 14.644,0L10.662,0L10.662,15.939C10.642,16.504 10.479,17.055 10.189,17.54C9.898,18.024 9.489,18.427 8.999,18.711C8.51,18.994 7.957,19.148 7.392,19.159C6.827,19.17 6.268,19.038 5.768,18.773C6.076,19.206 6.482,19.56 6.953,19.806C7.424,20.052 7.947,20.183 8.478,20.187Z" style="fill:rgb(37,244,238);fill-rule:nonzero;"/>
+    <path d="M20.174,6.48L20.174,5.531C19.102,5.531 18.053,5.217 17.157,4.629C17.933,5.518 18.982,6.216 20.174,6.48Z" style="fill:rgb(37,244,238);fill-rule:nonzero;"/>
+    <path d="M17.157,4.629C16.279,3.624 15.795,2.335 15.796,1.001L14.704,1.001C14.847,1.74 15.138,2.442 15.559,3.066C15.981,3.689 16.524,4.221 17.157,4.629Z" style="fill:rgb(254,44,85);fill-rule:nonzero;"/>
+    <path d="M7.319,12.432C6.565,12.427 5.831,12.677 5.237,13.14C4.642,13.604 4.221,14.254 4.042,14.987C3.863,15.719 3.936,16.49 4.249,17.176C4.562,17.862 5.098,18.422 5.769,18.766C5.354,18.198 5.129,17.514 5.127,16.811C5.124,16.108 5.344,15.423 5.755,14.852C6.166,14.282 6.747,13.856 7.414,13.636C8.082,13.416 8.802,13.412 9.472,13.626L9.472,9.566C9.145,9.52 8.815,9.496 8.485,9.495L8.285,9.495L8.285,12.562C7.972,12.467 7.646,12.424 7.319,12.432Z" style="fill:rgb(254,44,85);fill-rule:nonzero;"/>
+    <path d="M20.174,6.413L20.152,6.413L20.143,9.475C18.159,9.473 16.225,8.846 14.618,7.683L14.618,15.811C14.611,17.144 14.241,18.45 13.547,19.589C12.853,20.727 11.862,21.654 10.68,22.271C9.498,22.888 8.17,23.17 6.839,23.088C5.509,23.006 4.226,22.562 3.129,21.805C4.129,22.882 5.431,23.633 6.865,23.96C8.299,24.286 9.798,24.173 11.166,23.635C12.535,23.097 13.709,22.159 14.536,20.943C15.364,19.727 15.805,18.291 15.804,16.82L15.804,8.729C17.416,9.887 19.352,10.51 21.337,10.508L21.337,6.536C20.946,6.536 20.556,6.495 20.174,6.413Z" style="fill:rgb(254,44,85);fill-rule:nonzero;"/>
+    <path d="M14.644,15.807L14.644,7.725C16.256,8.884 18.192,9.506 20.177,9.504L20.177,6.413C19.004,6.161 17.944,5.535 17.157,4.629C16.528,4.22 15.989,3.687 15.572,3.064C15.155,2.44 14.869,1.738 14.731,1.001L11.822,1.001L11.822,16.94C11.797,17.636 11.555,18.307 11.13,18.858C10.705,19.41 10.118,19.815 9.451,20.016C8.785,20.217 8.072,20.205 7.413,19.98C6.753,19.756 6.181,19.331 5.775,18.765C5.113,18.419 4.586,17.86 4.278,17.179C3.971,16.497 3.901,15.732 4.079,15.006C4.258,14.28 4.674,13.635 5.263,13.174C5.851,12.713 6.577,12.462 7.325,12.462C7.66,12.463 7.993,12.515 8.312,12.617L8.312,9.5C6.901,9.532 5.531,9.971 4.365,10.765C3.198,11.558 2.287,12.672 1.739,13.972C1.191,15.272 1.031,16.702 1.278,18.091C1.525,19.48 2.168,20.768 3.13,21.799C4.226,22.568 5.512,23.022 6.848,23.11C8.184,23.198 9.519,22.918 10.707,22.3C11.895,21.682 12.89,20.749 13.584,19.604C14.278,18.459 14.645,17.146 14.644,15.807Z" style="fill:white;fill-rule:nonzero;"/>
+    <path d="M25.268,6.426L37.7,6.426L36.559,9.981L33.332,9.981L33.332,23.127L29.314,23.127L29.314,9.981L25.272,9.989L25.268,6.426Z" style="fill:white;fill-rule:nonzero;"/>
+    <path d="M58.054,6.426L70.769,6.426L69.628,9.981L66.123,9.981L66.123,23.127L62.1,23.127L62.1,9.981L58.057,9.989L58.054,6.426Z" style="fill:white;fill-rule:nonzero;"/>
+    <path d="M38.454,11.738L42.439,11.738L42.435,23.126L38.478,23.126L38.454,11.738Z" style="fill:white;fill-rule:nonzero;"/>
+    <path d="M44.019,6.378L47.999,6.378L47.999,14.151L51.94,10.285L56.701,10.285L51.711,15.127L57.3,23.126L52.908,23.126L49.178,17.579L47.999,18.726L47.999,23.126L44.019,23.126L44.019,6.378Z" style="fill:white;fill-rule:nonzero;"/>
+    <path d="M86.194,6.378L90.175,6.378L90.175,14.151L94.118,10.28L98.869,10.28L93.88,15.122L99.468,23.121L95.08,23.121L91.352,17.579L90.172,18.726L90.172,23.126L86.194,23.126L86.194,6.378Z" style="fill:white;fill-rule:nonzero;"/>
+    <path d="M40.446,10.436C41.553,10.436 42.451,9.539 42.451,8.431C42.451,7.324 41.553,6.426 40.446,6.426C39.338,6.426 38.441,7.324 38.441,8.431C38.441,9.539 39.338,10.436 40.446,10.436Z" style="fill:white;fill-rule:nonzero;"/>
+    <path d="M70.26,16.308C70.26,14.593 70.906,12.942 72.07,11.682C73.234,10.423 74.83,9.649 76.539,9.514C76.362,9.501 76.121,9.492 75.941,9.492C74.15,9.517 72.44,10.246 71.182,11.522C69.924,12.797 69.219,14.517 69.219,16.309C69.219,18.101 69.924,19.82 71.182,21.096C72.44,22.372 74.15,23.101 75.941,23.126C76.121,23.126 76.362,23.116 76.539,23.102C74.83,22.967 73.234,22.193 72.07,20.934C70.906,19.674 70.26,18.023 70.26,16.308Z" style="fill:rgb(37,244,238);fill-rule:nonzero;"/>
+    <path d="M78.09,9.492C77.909,9.492 77.667,9.501 77.489,9.514C79.198,9.649 80.794,10.424 81.957,11.683C83.121,12.942 83.767,14.594 83.767,16.308C83.767,18.023 83.121,19.674 81.957,20.934C80.794,22.193 79.198,22.967 77.489,23.102C77.667,23.117 77.909,23.126 78.09,23.126C78.994,23.139 79.89,22.972 80.729,22.635C81.567,22.298 82.329,21.798 82.973,21.163C83.616,20.529 84.126,19.773 84.475,18.94C84.824,18.107 85.003,17.212 85.003,16.309C85.003,15.406 84.824,14.511 84.475,13.678C84.126,12.845 83.616,12.089 82.973,11.455C82.329,10.82 81.567,10.32 80.729,9.983C79.89,9.646 78.994,9.479 78.09,9.492Z" style="fill:rgb(254,44,85);fill-rule:nonzero;"/>
+    <path d="M77.014,9.492C75.665,9.491 74.347,9.891 73.226,10.64C72.104,11.389 71.23,12.454 70.714,13.7C70.198,14.946 70.063,16.317 70.326,17.639C70.589,18.962 71.238,20.177 72.192,21.13C73.145,22.084 74.36,22.733 75.683,22.996C77.005,23.259 78.376,23.124 79.622,22.608C80.868,22.092 81.933,21.218 82.682,20.096C83.431,18.975 83.831,17.657 83.83,16.308C83.83,14.5 83.112,12.767 81.834,11.488C80.556,10.21 78.822,9.492 77.014,9.492ZM77.014,19.622C76.358,19.622 75.718,19.428 75.173,19.064C74.628,18.7 74.203,18.182 73.952,17.576C73.701,16.971 73.635,16.304 73.763,15.662C73.891,15.019 74.207,14.428 74.67,13.964C75.134,13.501 75.724,13.185 76.367,13.057C77.01,12.93 77.677,12.995 78.282,13.246C78.888,13.497 79.405,13.922 79.77,14.467C80.134,15.012 80.328,15.653 80.328,16.308C80.328,17.187 79.979,18.03 79.357,18.652C78.736,19.273 77.893,19.622 77.014,19.622Z" style="fill:white;fill-rule:nonzero;"/>
+            </svg>
+        </div>
+        <button class="join-btn">Join</button>
+        <button class="user-btn hidden">
+            <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 48 48">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0003 7C20.1343 7 17.0003 10.134 17.0003 14C17.0003 17.866 20.1343 21 24.0003 21C27.8663 21 31.0003 17.866 31.0003 14C31.0003 10.134 27.8663 7 24.0003 7ZM13.0003 14C13.0003 7.92487 17.9252 3 24.0003 3C30.0755 3 35.0003 7.92487 35.0003 14C35.0003 20.0751 30.0755 25 24.0003 25C17.9252 25 13.0003 20.0751 13.0003 14ZM24.0003 33C18.0615 33 13.0493 36.9841 11.4972 42.4262C11.3457 42.9573 10.8217 43.3088 10.2804 43.1989L8.32038 42.8011C7.77914 42.6912 7.4266 42.1618 7.5683 41.628C9.49821 34.358 16.1215 29 24.0003 29C31.8792 29 38.5025 34.358 40.4324 41.628C40.5741 42.1618 40.2215 42.6912 39.6803 42.8011L37.7203 43.1989C37.179 43.3088 36.6549 42.9573 36.5035 42.4262C34.9514 36.9841 29.9391 33 24.0003 33Z"></path>
+            </svg>
+            <span class="user-address">0x...5678</span>
+        </button>
+
+    </header>
+
+
+    <main class="main">
+        <div class="hero full-height">
+            <div class="cardcontainment">
+                <h1>
+                    <span class="white-text">Join one</span><br>
+                    <span class="pink-text">win it all</span>
+                </h1>
+            </div>
+        </div>
+
+        <div class="cardpink full-height">
+            <div class="cardcontainment card01 full-height">
+                <h2>
+                    Team up and win together with TikTok Frenzy
+                </h2>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="cardblack full-height">
+            <div class="cardcontainment card02 full-height">
+                <h2>How it works</h2>
+                <hr>
+                <ol id="steps-list">
+                    <li class="step active">
+                        1. Connect a Wallet
+                        <p>Connect a Crypto wallet to interact with the <span class="blue-text">TikTok Frenzy</span> smart contract on the blockchain.<br><br>The smartcontract is opensource and runs on the Binance Smart Chain.</p>
+                    </li>
+                    <li class="step">
+                        2. Join a Team
+                        <p>Enter the username of your <span class="blue-text">Favorite Influencer</span> and choose one yourself. By joining the TikTok Frenzy, you automatically become part of that influencer <span class="blue-text">team.</span></p>
+                    </li>
+                    <li class="step">
+                        3. Climb the leaderboard
+                        <p>For every entry, you and your favorite influencer receive 100 TikTok Frenzy Points. <span class="blue-text">Support your team </span>or compete with other influencers by sharing your own username.</p>
+                    </li>
+                    <li class="step">
+                        4. Win!
+                        <p>When all the TikTok Frenzy Points are distributed the score become final, the users who joined the team of the winning influencers veryone in the team can withdraw their profit.</p>
+                    </li>
+                </ol>
+                <div class="navigation-container">
+                    <button id="prev-btn">
+                        <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20.5" cy="20" r="19.5" transform="rotate(180 20.5 20)" stroke="white"/>
+                            <path d="M11.3246 19.3952C10.9913 19.7286 10.9913 20.269 11.3246 20.6023L16.7566 26.0343C17.0899 26.3676 17.6304 26.3676 17.9637 26.0343C18.297 25.7009 18.297 25.1605 17.9637 24.8272L13.1353 19.9988L17.9637 15.1704C18.297 14.8371 18.297 14.2966 17.9637 13.9633C17.6304 13.63 17.0899 13.63 16.7566 13.9633L11.3246 19.3952ZM30.0234 19.1452L11.9282 19.1452L11.9282 20.8523L30.0234 20.8523L30.0234 19.1452Z" fill="white"/>
+                        </svg>
+                    </button>
+                    <span id="step-indicator">01/04</span>
+                    <button id="next-btn">
+                        <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle r="19.5" transform="matrix(1 8.74228e-08 8.74228e-08 -1 20.5 20)" stroke="white"/>
+                            <path d="M29.6754 19.3952C30.0087 19.7286 30.0087 20.269 29.6754 20.6023L24.2434 26.0343C23.9101 26.3676 23.3696 26.3676 23.0363 26.0343C22.703 25.7009 22.703 25.1605 23.0363 24.8272L27.8647 19.9988L23.0363 15.1704C22.703 14.8371 22.703 14.2966 23.0363 13.9633C23.3696 13.63 23.9101 13.63 24.2434 13.9633L29.6754 19.3952ZM10.9766 19.1452L29.0718 19.1452L29.0718 20.8523L10.9766 20.8523L10.9766 19.1452Z" fill="white"/>
+                        </svg>
+                    </button>
+                </div>
+                <button class="join-btn join-btn2">Get Started</button>
+            </div>
+        </div>
+
+        <div class="cardblue full-height">
+            <div class="cardcontainment card03 full-height">
+                <h2>
+                    Exclusive decentralised <span class="pink-text">points</span> system
+                </h2>
+                <p>TikTok Frenzy Points are Non-transferable tokens with a <span class="pink-text">limited supply.</span> They are essential and directly linked to the rankings in the leaderboard.</p>
+                <p>When all points are distributed the score is setteled. Every user that joined the winning team can claim there part of the prizepot directly from the <a class="pink-text" target="_blank" href="https://bscscan.com/address/0x2163d419DD7bD13151b6E21Ef074abE019774Dd6">smartcontract balance.</a></p>
+            </div>
+        </div>
+
+
+        <div class="leaderboard-card full-height02">
+            <div class="cardcontainment"></div>
+            <div class="leaderboard-holder">
+                <h2>Leaderboard</h2>
+                <div id="leaderboard">
+                </div>
+                <p class="leaderboard-note"><span class="updated"> Connect to the Binance Smart Chain.</span><br>Or check all the token holders on <a href="https://bscscan.com/token/0x2163d419DD7bD13151b6E21Ef074abE019774Dd6#balances" target="_blank" class="pink-text">BscScan.</a></p>
+            </div>
+        </div>
+        </div>
+
+
+
+    </main>
+
+    <!-- Wallet Connect Layover -->
+    <div id="wallet-overlay" class="wallet-overlay hidden">
+        <div class="wallet-modal">
+            <button id="close-overlay" class="close-button">
+                <svg class="close-icon" width="24" height="24" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1718 23.9999L10.2931 13.1212C9.90261 12.7307 9.90261 12.0975 10.2931 11.707L11.7074 10.2928C12.0979 9.90228 12.731 9.90228 13.1216 10.2928L24.0002 21.1715L34.8789 10.2928C35.2694 9.90228 35.90228 9.90228 36.2931 10.2928L37.7073 11.707C38.0975 12.0975 38.0975 12.7307 37.7073 13.1212L26.8287 23.9999L37.7073 34.8786C38.0975 35.2691 38.0975 35.9023 37.7073 36.2928L36.2931 37.707C35.9023 38.0975 35.2691 38.0975 34.8789 37.707L24.0002 26.8283L13.1216 37.707C12.731 38.0975 12.0975 38.0975 11.7074 37.707L10.2931 36.2928C9.9023 35.9023 9.9023 35.2691 10.2931 34.8786L21.1718 23.9999Z"></path>
+                </svg>
+            </button>
+            <h2 class="modal-title" id="modal-title">Connect Wallet</h2>
+            <div class="padding-modal">
+
+                <!-- Connect MetaMask -->
+                <div id="connect-metamask-content" class="modal-content">
+                    <button id="connect-metamask" class="wallet-button">
+                        <img src="src/images/metamask_fox.svg" alt="MetaMask" class="wallet-icon"> Connect with MetaMask
+                    </button>
+                </div>
+
+                <!-- Install MetaMask -->
+                <div id="install-metamask-content" class="modal-content hidden">
+                    <button id="install-metamask" class="wallet-button">
+                        <img src="src/images/metamask_fox.svg" alt="MetaMask" class="wallet-icon"> Install MetaMask
+                    </button>
+                </div>
+
+                <!-- Wallet Connected -->
+                <div id="wallet-connected-content" class="modal-content hidden">
+                    <form id="frenzy-form">
+                        <!-- Influencer Input -->
+                        <div class="input-wrapper">
+                            <input type="text" id="influencer-username" class="input-field" placeholder="Favorite Influencer" required>
+                            <svg class="input-icon star-icon" xmlns="http://www.w3.org/2000/svg" fill="#757575" viewBox="0 0 48 48">
+                <path d="M18.99,3C24.476,3 28.99,7.514 28.99,13C28.99,18.486 24.476,23 18.99,23C13.504,23 8.99,18.486 8.99,13C8.99,7.514 13.504,3 18.99,3ZM18.99,7C15.698,7 12.99,9.708 12.99,13C12.99,16.292 15.698,19 18.99,19C18.992,19 18.993,19 18.995,19C22.287,19 24.995,16.292 24.995,13C24.995,9.71 22.29,7.003 19,7L18.99,7ZM18.99,26C21.95,26 24.59,26.58 26.86,27.65L23.79,30.71C22.238,30.221 20.617,29.981 18.99,30C10.9,30 6.3,35.16 6,43C5.98,43.55 5.54,44 4.98,44L2.98,44C2.43,44 1.98,43.55 2,43C2.33,32.99 8.7,26 19,26L18.99,26ZM30.609,34.211L34.489,30.331L34.489,43.511C34.489,44.059 34.941,44.511 35.489,44.511L37.489,44.511C38.038,44.511 38.489,44.059 38.489,43.511L38.489,30.331L42.369,34.211C42.757,34.596 43.392,34.596 43.779,34.211L45.199,32.801C45.389,32.613 45.495,32.357 45.495,32.091C45.495,31.824 45.389,31.568 45.199,31.381L37.899,24.081C37.124,23.31 35.854,23.31 35.079,24.081L27.779,31.381C27.59,31.568 27.484,31.824 27.484,32.091C27.484,32.357 27.59,32.613 27.779,32.801L29.199,34.211C29.587,34.596 30.222,34.596 30.609,34.211Z"></path>
+            </svg>
+                        </div>
+
+                        <!-- Username Input -->
+                        <div class="input-wrapper">
+                            <input type="text" id="your-username" class="input-field" placeholder="Your Username" required>
+                            <svg class="input-icon user-icon" xmlns="http://www.w3.org/2000/svg" fill="#757575" viewBox="0 0 48 48">
+                <path d="M19,26C21.956,26.001 24.593,26.581 26.86,27.65L23.79,30.71C22.238,30.221 20.617,29.981 18.99,30C10.9,30 6.3,35.16 6,43C5.98,43.55 5.54,44 4.98,44L2.98,44C2.43,44 1.98,43.55 2,43C2.33,32.993 8.696,26.005 18.99,26L19,26ZM18.99,3C24.476,3 28.99,7.514 28.99,13C28.99,18.486 24.476,23 18.99,23C13.504,23 8.99,18.486 8.99,13C8.99,7.514 13.504,3 18.99,3ZM18.99,7C15.698,7 12.99,9.708 12.99,13C12.99,16.292 15.698,19 18.99,19L18.995,19C22.287,19 24.995,16.292 24.995,13C24.995,9.71 22.29,7.003 19,7L18.99,7ZM34.51,34.996L28.207,34.996C27.941,34.997 27.685,34.892 27.497,34.703C27.309,34.515 27.202,34.259 27.203,33.992L27.21,31.991C27.212,31.445 27.661,30.996 28.207,30.994L34.525,30.979L34.523,24.679C34.525,24.132 34.974,23.683 35.52,23.682L37.521,23.675C37.788,23.673 38.044,23.779 38.232,23.967C38.421,24.156 38.527,24.411 38.525,24.679L38.525,30.981L44.828,30.981C45.095,30.98 45.35,31.085 45.539,31.274C45.728,31.463 45.833,31.718 45.832,31.985L45.825,33.986C45.823,34.532 45.374,34.981 44.828,34.983L38.511,34.999L38.512,41.299C38.511,41.845 38.062,42.294 37.515,42.296L35.514,42.303C35.247,42.304 34.992,42.198 34.803,42.01C34.615,41.821 34.509,41.566 34.51,41.299L34.51,34.996Z"></path>
+            </svg>
+                        </div>
+
+                    </form>
+                    <!-- Submit Button -->
+                    <button type="button" id="joinButton" class="wallet-button pink-button">Join Frenzy</button>
+
+                </div>
+
+
+            </div>
+
+            <div class="modal-disclaimer">
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Box -->
+    <div id="notification" class="notification hidden">
+        <p id="notification-message"></p>
+    </div>
+
+    <script src="src/scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <script src="src/scripts/web3.js"></script>
+    <script src="src/scripts/leaderboard.js"></script>
+    <script src="src/scripts/vertslide.js"></script>
+</body>
+
+</html>

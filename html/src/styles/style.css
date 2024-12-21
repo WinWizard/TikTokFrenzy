@@ -1,0 +1,740 @@
+/* Font Faces */
+
+@font-face {
+    font-family: 'TikTokText-Regular';
+    src: url('../fonts/TikTokText-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TikTokText-Bold';
+    src: url('../fonts/TikTokText-Bold.ttf') format('truetype');
+}
+
+
+/* Reset and global styles */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'TikTokText-Regular', Arial, sans-serif;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+
+/* Header styling */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 16px;
+    background-color: #010101;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #2f2f2f;
+}
+
+.logo {
+    height: 42px;
+    cursor: pointer;
+}
+
+.user-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #252525;
+    height: 36px;
+    width: 120px;
+    border: none;
+    color: #ffffff;
+    font-family: 'TikTokText-Bold', Arial, sans-serif;
+    font-size: 16px;
+    padding: 6px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    gap: 8px;
+    /* Adds spacing between the icon and text */
+    overflow: hidden;
+    /* Ensures content doesn't exceed button bounds */
+    text-overflow: ellipsis;
+    /* Adds ellipsis if content is too long */
+    white-space: nowrap;
+    /* Prevents text from wrapping */
+}
+
+.user-btn:hover {
+    background-color: #333333;
+}
+
+.button-icon {
+    width: 18px;
+    height: 18px;
+    fill: #ffffff;
+    flex-shrink: 0;
+    /* Prevents the icon from resizing */
+}
+
+.user-address {
+    font-size: 14px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.user-btn:hover {
+    background-color: #333333;
+}
+
+.join-btn {
+    background-color: rgb(255, 59, 92);
+    height: 36px;
+    width: 100px;
+    border: none;
+    color: #ffffff;
+    font-family: 'TikTokText-Bold', Arial, sans-serif;
+    font-size: 16px;
+    padding: 6px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.join-btn2 {
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 22px;
+    width: calc(100% - (40px));
+    height: 48px;
+}
+
+.join-btn:hover {
+    background-color: rgb(243, 84, 113);
+}
+
+
+/* Main container */
+
+.main {
+    height: 100%;
+}
+
+
+/* Full-height sections with scroll snapping */
+
+.full-height {
+    height: 100vh;
+    display: block;
+    scroll-snap-align: start;
+    position: relative;
+    margin: auto;
+}
+
+
+/* Hero Section */
+
+.hero {
+    background-color: #000000;
+    text-align: center;
+    padding: 0 16px;
+    align-items: center;
+    align-content: center;
+}
+
+.hero h1 {
+    font-family: 'TikTokText-Bold', Arial, sans-serif;
+    font-size: 16vw;
+    margin: 0;
+}
+
+@media (min-width: 850px) {
+    .hero h1 {
+        font-family: 'TikTokText-Bold', Arial, sans-serif;
+        font-size: 9rem;
+        margin: 0;
+    }
+}
+
+.hero .white-text {
+    color: #ffffff;
+}
+
+.hero .pink-text {
+    color: rgb(255, 59, 92);
+}
+
+
+/* Card Section */
+
+.cardcontainment {
+    max-width: 800px;
+    /* Limit the card's width */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cardpink {
+    background-color: #F1DADF;
+}
+
+.cardblue {
+    background-color: #cee6e5;
+}
+
+.cardblack {
+    background-color: #000;
+}
+
+.card01 {
+    background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 300\"><path d=\"M161.593,110.581C163.043,129.964 163.085,152.012 146.593,167.581C130.101,183.15 76.409,182.925 53.593,171.581C31.915,160.803 28.758,111.846 27.731,88.451C26.704,65.057 35.051,51.971 51.593,43.581C74.513,31.956 119.889,43.255 134.593,55.581C154.478,72.25 160.143,91.198 161.593,110.581C163.043,129.964 163.085,152.012 146.593,167.581\" fill=\"none\" stroke=\"%23FF3B5C\" stroke-width=\"6\"/><path d=\"M168.83428616457297,90.24142886595197C170.2843707893995,109.62431568464453,153.99375817279295,142.597819662992,137.50190507830342,158.16667091824723C121.0100519838139,173.73552217350246,88.17834330250474,195.27374114789848,69.88316759763579,183.6545363974833C51.58799189276684,172.03533164706812,28.757950660710332,111.84631972610812,27.730850849089713,88.45144241575625C26.703751037469093,65.05656510540437,46.87547764786966,51.04895460364942,63.720568727912074,43.28527253537203C80.56565980795449,35.52159046709464,111.28244442323407,34.043323950995244,128.8013973293442,41.8693500060919C146.32035023545436,49.695376061188554,167.38420153974644,70.85854204725942,168.83428616457297,90.24142886595197C170.2843707893995,109.62431568464453,153.99375817279295,142.597819662992,137.50190507830342,158.16667091824723\" fill=\"none\" stroke=\"%23000\" stroke-width=\"6\"/></svg>') no-repeat;
+    text-align: left;
+    color: #000000;
+    padding: 20px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background-position: 50vw 58vh;
+    /* Adjusted to respect padding */
+    background-size: auto 650px;
+    background-repeat: no-repeat;
+    background-color: #F1DADF;
+}
+
+@media (min-width: 800px) {
+    .card01 {
+        background-position: 450px 58vh;
+    }
+}
+
+.card01 h2 {
+    font-size: 4rem;
+    font-family: 'TikTokText-Bold', Arial, sans-serif;
+    margin-top: 60px;
+    max-width: 550px;
+}
+
+.card02 {
+    background-color: #000;
+    text-align: left;
+    color: #fff;
+    padding: 20px;
+}
+
+.card02 h2 {
+    font-size: 14vw;
+    font-family: 'TikTokText-Bold', Arial, sans-serif;
+    max-width: 840px;
+    align-self: flex-start;
+    margin-top: 100px;
+    margin-bottom: 1vw;
+}
+
+@media (min-width: 750px) {
+    .card02 h2 {
+        font-size: 6rem;
+    }
+}
+
+.card02 hr {
+    border: none;
+    /* Remove default styling */
+    height: 4px;
+    /* Set the thickness of the line */
+    background-color: #24f4ee;
+    /* TikTok's blue color */
+    margin: 0px 0;
+    /* Optional: Add spacing above and below */
+}
+
+.card02 ol li {
+    color: #24f4ee;
+    margin-top: 50px;
+    margin-left: -30px;
+    font-size: 2rem;
+    font-family: 'TikTokText-Bold', Arial, sans-serif;
+}
+
+.card02 ol li p {
+    color: rgb(255, 255, 255);
+    margin-top: 1.6rem;
+    font-size: 1.6rem;
+    font-family: 'TikTokText-Regular', Arial, sans-serif;
+}
+
+.card03 {
+    background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 300\"><path d=\"M161.593,110.581C163.043,129.964 163.085,152.012 146.593,167.581C130.101,183.15 76.409,182.925 53.593,171.581C31.915,160.803 28.758,111.846 27.731,88.451C26.704,65.057 35.051,51.971 51.593,43.581C74.513,31.956 119.889,43.255 134.593,55.581C154.478,72.25 160.143,91.198 161.593,110.581C163.043,129.964 163.085,152.012 146.593,167.581\" fill=\"none\" stroke=\"%23FF3B5C\" stroke-width=\"6\"/><path d=\"M168.83428616457297,90.24142886595197C170.2843707893995,109.62431568464453,153.99375817279295,142.597819662992,137.50190507830342,158.16667091824723C121.0100519838139,173.73552217350246,88.17834330250474,195.27374114789848,69.88316759763579,183.6545363974833C51.58799189276684,172.03533164706812,28.757950660710332,111.84631972610812,27.730850849089713,88.45144241575625C26.703751037469093,65.05656510540437,46.87547764786966,51.04895460364942,63.720568727912074,43.28527253537203C80.56565980795449,35.52159046709464,111.28244442323407,34.043323950995244,128.8013973293442,41.8693500060919C146.32035023545436,49.695376061188554,167.38420153974644,70.85854204725942,168.83428616457297,90.24142886595197C170.2843707893995,109.62431568464453,153.99375817279295,142.597819662992,137.50190507830342,158.16667091824723\" fill=\"none\" stroke=\"%23000\" stroke-width=\"6\"/></svg>') no-repeat;
+    text-align: left;
+    color: #000000;
+    padding: 20px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background-position: 50vw 58vh;
+    /* Adjusted to respect padding */
+    background-size: auto 650px;
+    background-repeat: no-repeat;
+    background-color: #cee6e5;
+}
+
+@media (min-width: 800px) {
+    .card03 {
+        background-position: 450px 58vh;
+    }
+}
+
+.card03 h2 {
+    font-size: 3.5rem;
+    font-family: 'TikTokText-Bold', Arial, sans-serif;
+    margin-top: 60px;
+    max-width: 550px;
+}
+
+.card03 p {
+    font-size: 1.4rem;
+}
+
+.pink-text {
+    color: rgb(255, 59, 92);
+}
+
+.blue-text {
+    color: #24f4ee;
+}
+
+.leaderboard-note {
+    color: #a6a6a6;
+    font-family: 'TikTokText-Regular', Arial, sans-serif;
+    text-align: center;
+}
+
+
+/* Wallet Overlay */
+
+.wallet-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black with 80% opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    color: #ffffff;
+    font-family: 'TikTokText-Regular', Arial, sans-serif;
+}
+
+.wallet-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Wallet Modal */
+
+.wallet-modal {
+    background-color: #121212;
+    padding-top: 40px;
+    border-radius: 8px;
+    /* Fully rounded corners for the modal */
+    text-align: center;
+    width: 450px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    /* Required for the close button positioning */
+}
+
+.modal-content {
+    display: none;
+}
+
+.modal-content:not(.hidden) {
+    display: block;
+}
+
+.modal-title {
+    color: #ffffff;
+    font-size: 33px;
+    font-family: 'TikTokText-Regular', Arial, sans-serif;
+}
+
+.padding-modal {
+    padding: 10px 50px 80px;
+}
+
+
+/* Wallet Button */
+
+.wallet-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Left-align text */
+    padding: 8px 10px;
+    width: 100%;
+    /* Full width */
+    background-color: #252525;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    /* Rounded corners for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 14px;
+    /* Space between buttons */
+    box-sizing: border-box;
+    font-family: 'TikTokText-Regular', Arial, sans-serif;
+}
+
+.wallet-button:hover {
+    background-color: #333333;
+}
+
+.wallet-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+}
+
+
+/* Disclaimer */
+
+.modal-disclaimer {
+    font-family: 'TikTokText-Regular', Arial, sans-serif;
+    background-color: #252525;
+    color: #a5a5a5;
+    font-size: 12px;
+    padding: 16px;
+    border-bottom-left-radius: 8px;
+    /* Rounded corners to match modal */
+    border-bottom-right-radius: 8px;
+    /* Rounded corners to match modal */
+    margin-top: 24px;
+    /* Space between buttons and disclaimer */
+    text-align: center;
+}
+
+.modal-disclaimer a {
+    color: #fff;
+    /* White link color for high contrast */
+    text-decoration: none;
+    /* Removes underline */
+}
+
+.discl-pink {
+    color: rgb(255, 59, 92);
+}
+
+
+/* Close Button */
+
+.close-button {
+    background-color: #252525;
+    border-radius: 50%;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 42px;
+    /* Adjusted to fit the SVG */
+    height: 42px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    /* Center the SVG */
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.close-button:hover {
+    background-color: #333333;
+}
+
+.close-icon {
+    width: 24px;
+    /* Size of the SVG icon */
+    height: 24px;
+    fill: #ffffff;
+    /* Icon color */
+}
+
+
+/* Notification */
+
+.notification {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #121212;
+    color: #ffffff;
+    padding: 8px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    z-index: 2000;
+    transition: top 0.5s ease;
+}
+
+.notification.hidden {
+    top: -100px;
+}
+
+.notification.visible {
+    top: 20px;
+}
+
+
+/* Wrapper for Inputs with Icons */
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 44px;
+    /* Space for the icon */
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #252525;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'TikTokText-Regular', Arial, sans-serif;
+    caret-color: rgb(255, 59, 92);
+    /* TikTok pink */
+}
+
+.input-field::placeholder {
+    color: #757575;
+}
+
+.input-field:focus {
+    outline: none;
+    background-color: #333333;
+    /* TikTok pink */
+}
+
+
+/* Input Icon */
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    /* White color for icons */
+    pointer-events: none;
+    /* Prevent interactions with the icon */
+}
+
+
+/* Pink Button */
+
+.pink-button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgb(255, 59, 92);
+    /* TikTok pink */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pink-button:hover {
+    background-color: rgb(240, 50, 85);
+}
+
+.hidden {
+    display: none;
+}
+
+.full-height02 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    position: relative;
+    padding: 20px;
+    background: linear-gradient( 110deg, #69C9D0 0%, /* TikTok blue */
+    rgba(0, 0, 0, 0.9) 30%, /* Black with slight transparency */
+    rgba(0, 0, 0, 1) 50%, /* Solid black in the middle */
+    rgba(0, 0, 0, 0.9) 70%, /* Black fading out */
+    #EE1D52 100%/* TikTok pink */
+    ), black;
+    /* Ensure the base is solid black */
+    background-size: cover;
+    /* Ensures the image covers the entire card */
+    background-position: center;
+    /* Centers the image in the card */
+    background-repeat: no-repeat;
+    /* Prevents tiling of the image */
+}
+
+.leaderboard-card h2 {
+    font-size: 33px;
+    color: #fff;
+    font-family: 'TikTokText-Regular', Arial, sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.leaderboard-holder {
+    padding: 20px;
+    background: #121212;
+    width: 80%;
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 8px;
+    border-width: 6px;
+    border-color: #EE1D52;
+}
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.leaderboard-table th {
+    color: rgb(255, 59, 92);
+    text-align: left;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.leaderboard-table td {
+    background: #252525;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    font-family: 'TikTokText-regular', Arial, sans-serif;
+    text-align: left;
+    position: relative;
+    border: none;
+}
+
+.leaderboard-table tr td:nth-child(1) {
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    width: 10%;
+    /* Reduce width of the Rank column */
+}
+
+.leaderboard-table tr td:nth-child(2) {
+    border-radius: 4px 0 0 4px;
+    text-align: left;
+    padding-left: 20px;
+    /* Add space to the left of the username */
+}
+
+.leaderboard-table tr td:nth-child(3) {
+    text-align: left;
+    width: 25%;
+    /* Reduce width of the Wallet column */
+}
+
+.leaderboard-table tr td:nth-child(4) {
+    border-radius: 0 4px 4px 0;
+    text-align: left;
+    width: 30%;
+    /* Adjust width of the Score column */
+}
+
+.leaderboard-table tr:hover td {
+    background: rgb(255, 59, 92);
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.leaderboard-table tr:hover td:nth-child(1) {
+    background: transparent;
+}
+
+
+/* Gow it works list */
+
+#setp-list {
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+#steps-list .step {
+    display: none;
+}
+
+#steps-list .step.active {
+    display: block;
+    min-height: 250px;
+}
+
+.navigation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 300px;
+    /* Adjust based on your preference */
+    margin: 50px auto 0;
+}
+
+#prev-btn,
+#next-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#step-indicator {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
